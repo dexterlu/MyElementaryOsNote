@@ -48,7 +48,8 @@ libinput-gestures: device /dev/input/event7: ETPS/2 Elantech Touchpad
 ```
 
 
-## 15 Things to do after installing elementary OS
+## Elementary OS must install
+https://linoxide.com/distros/things-after-fresh-installation-elementary-5-juno/
 https://averagelinuxuser.com/after-install-elementary-juno/
 
 ## How can I change the default Terminal app?
