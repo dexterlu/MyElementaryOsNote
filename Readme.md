@@ -24,6 +24,12 @@ libinput-gestures-setup autostart
 libinput-gestures-setup start
 ```
 
+### Replace my setting
+```
+cp libinput-gestures.conf /etc/libinput-gestures.conf
+libinput-gestures-setup stop
+libinput-gestures-setup start
+```
 
 ## My Setting
 ```
