@@ -1,37 +1,45 @@
-# libinput-gestures 
+# Readme
+Here are my elementary OS some configurations.
+
+## Elementary OS must install
+https://linoxide.com/distros/things-after-fresh-installation-elementary-5-juno/
+https://averagelinuxuser.com/after-install-elementary-juno/
+
+
+## libinput-gestures 
 增强Touchpad板功能
 使用的工具是 libinput-gestures，按照 Github 上的說明安裝即可。
 
-## Install
+### Install
 Following : https://github.com/bulletmark/libinput-gestures
 
-### Install lib
+#### Install lib
 ```bash
 sudo gpasswd -a $USER input
 sudo apt-get install xdotool wmctrl
 sudo apt-get install libinput-tools
 ```
-### Install this software:
+#### Install this software:
 ```bash
 git clone https://github.com/bulletmark/libinput-gestures.git
 cd libinput-gestures
 sudo make install (or sudo ./libinput-gestures-setup install)
 ```
 
-### CONFIGURATION and run
+#### CONFIGURATION and run
 ```
 libinput-gestures-setup autostart
 libinput-gestures-setup start
 ```
 
-### Replace my setting
+#### Replace my setting
 ```
 cp libinput-gestures.conf /etc/libinput-gestures.conf
 libinput-gestures-setup stop
 libinput-gestures-setup start
 ```
 
-## My Setting
+#### My Setting
 ```
 # libinput-gestures -l
 libinput-gestures -l
@@ -53,10 +61,6 @@ libinput-gestures: device /dev/input/event7: ETPS/2 Elantech Touchpad
 
 ```
 
-
-## Elementary OS must install
-https://linoxide.com/distros/things-after-fresh-installation-elementary-5-juno/
-https://averagelinuxuser.com/after-install-elementary-juno/
 
 ## How can I change the default Terminal app?
 You can set the default terminal by changing the alternative for x-terminal-emulator. Installing gnome-terminal creates an alternative symlink so all you have to do is set it.
