@@ -3,6 +3,7 @@
 
 ## server
 在server 端加上 -u  這個選項，並可以指定測試使用的 buffer size ( 使用 window size 的選項) .
+`iperf -s -u -w 2048k -i 1`
 ```bash
 iperf -s -p 9005 -u  -w 2048K
 
@@ -15,6 +16,7 @@ iperf -s -p 9005 -u  -w 2048K
 
 ## Client
 client 端設定可以藉由調整測試時使用的 bandwidth 及 len  這兩個選項，得以跑出不同的效果~
+`iperf -c 192.168.1.116 -u -b 1000m -t 10 -i 1`
 ```bash
 iperf -c server.host.tw  -p 9005 -i 1 -t 300 -u -w 2048K -b 17400M -l 20700
 
