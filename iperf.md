@@ -32,3 +32,20 @@ iperf -c server.host.tw  -p 9005 -i 1 -t 300 -u -w 2048K -b 17400M -l 20700
          然後用多台client 同時對上一台 server 做壓力測試。
 iperf test udp 網路效能
 ```
+
+
+
+
+### iperf test the Airplay
+On the DUT start iperf with the following command.
+`iperf -s -u -i 1 -w 128k`
+
+On the iTunes server connected to the Base Station start iperf with the following command.
+Wired:    `iperf -c IP_of_DUT -u -b 10M -t 120 -i 1 -w 128k`
+Wireless: `iperf -c IP_of_DUT -u -b 5M -t 120 -i 1 -w 128k`
+
+The Airplay on 
+Wired: 
+The bandwidth output at the end of the test must be greater than 5Mb/s.
+Wireless:
+The bandwidth output at the end of the test must be greater than 4.9Mb/s with a packet loss < 0.1% on both channels 1 and 11
