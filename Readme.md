@@ -17,6 +17,13 @@ sudo apt install gimp
 sudo apt install audacity
 ```
 
+## Check your card and set profile
+pactl list cards short
+pacmd set-card-profile <index> <profile>
+
+#### Change Bluetooth profile to A2DP
+pacmd set-card-profile bluez_card.28_11_A5_45_6F_35 a2dp_sink
+
 ## Apps configuration
 ### libinput-gestures 
 增强Touchpad板功能
