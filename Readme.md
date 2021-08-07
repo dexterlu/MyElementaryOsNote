@@ -15,6 +15,7 @@ sudo apt-get install chromium-browser firefox
 sudo apt install openssh-server
 sudo apt install gimp
 sudo apt install audacity
+sudo apt install build-essential
 ```
 
 ## Check your card and set profile
