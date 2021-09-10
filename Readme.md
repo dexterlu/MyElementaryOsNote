@@ -17,6 +17,9 @@ sudo apt install gimp
 sudo apt install audacity
 sudo apt install build-essential
 ```
+電源管理
+sudo apt install tlp
+
 
 ## Check your card and set profile
 pactl list cards short

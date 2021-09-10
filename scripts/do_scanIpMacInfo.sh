@@ -14,3 +14,5 @@ wait
 
 echo "# 輸出 ARP table"
 arp -n | grep -v incomplete
+#arp -a | grep -v incomplete
+
