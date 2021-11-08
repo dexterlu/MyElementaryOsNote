@@ -16,6 +16,7 @@ sudo apt install openssh-server
 sudo apt install gimp
 sudo apt install audacity
 sudo apt install build-essential
+sudo apt install solaar solaar-gnome3
 ```
 電源管理
 sudo apt install tlp
