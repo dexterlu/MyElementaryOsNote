@@ -95,3 +95,12 @@ Edit: It seems like the shortcut implementation is not using the alternative, bu
 gsettings set org.gnome.desktop.default-applications.terminal exec gnome-terminal
 gsettings set org.gnome.desktop.default-applications.terminal exec-arg ''
 ```
+
+### customize dock panel on Ubuntu 20.04
+https://linuxconfig.org/how-to-customize-dock-panel-on-ubuntu-20-04-focal-fossa-linux
+gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode FIXED
+gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 64
+gsettings set org.gnome.shell.extensions.dash-to-dock unity-backlit-items true
+
