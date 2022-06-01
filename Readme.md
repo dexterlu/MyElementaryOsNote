@@ -97,10 +97,28 @@ gsettings set org.gnome.desktop.default-applications.terminal exec-arg ''
 ```
 
 ### customize dock panel on Ubuntu 20.04
-https://linuxconfig.org/how-to-customize-dock-panel-on-ubuntu-20-04-focal-fossa-linux
+ref: https://linuxconfig.org/how-to-customize-dock-panel-on-ubuntu-20-04-focal-fossa-linux
+```bash
 gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
 gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode FIXED
 gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 64
 gsettings set org.gnome.shell.extensions.dash-to-dock unity-backlit-items true
+```
+
+### Tweak
+https://linuxconfig.org/how-to-install-tweak-tool-on-ubuntu-20-04-lts-focal-fossa-linux
+
+The first step is to make sure that we have the universe repository enabled on our Ubuntu system:
+$ sudo add-apt-repository universe
+Once ready, execute the following command to install Tweak Tool on your Ubuntu 20.04 system:
+$ sudo apt install gnome-tweak-tool
+Use activities and search for tweak keyword to start the Tweak Tool. Alternatively, execute the bellow command:
+ $ gnome-tweaks
+( optional ) You may now install additional extensions to further tweak your system. Search for available gnome shell extensions:
+$ apt search gnome-shell-extension
+Next, either install only selected extensions for example:
+$ sudo apt install  gnome-shell-extension-gsconnect
+or install all extensions:
+$ sudo apt install $(apt search gnome-shell-extension | grep ^gnome | cut -d / -f1)
 
