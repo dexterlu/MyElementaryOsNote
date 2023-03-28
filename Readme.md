@@ -122,3 +122,37 @@ $ sudo apt install  gnome-shell-extension-gsconnect
 or install all extensions:
 $ sudo apt install $(apt search gnome-shell-extension | grep ^gnome | cut -d / -f1)
 
+## Keychron 
+### Change Function Key behavior
+ref: https://help.ubuntu.com/community/AppleKeyboard#Change_Function_Key_behavior
+
+This section of the document describe how to change the behavior of 'fn' key to better match what user expect. (See #201711, #162083)
+Here a description of each behavior :
+0 = disabled : Disable the 'fn' key. Pressing 'fn'+'F8' will behave like you only press 'F8'
+1 = fkeyslast : Function keys are used as last key. Pressing 'F8' key will act as a special key. Pressing 'fn'+'F8' will behave like a F8.
+2 = fkeysfirst : Function keys are used as first key. Pressing 'F8' key will behave like a F8. Pressing 'fn'+'F8' will act as special key (play/pause)
+
+- Switch to "Windows/Android"
+`$ echo 0  | sudo tee /sys/module/hid_apple/parameters/fnmode`
+- Switch to "iOS"
+`$ echo 2  | sudo tee /sys/module/hid_apple/parameters/fnmode`
+
+You can also change your driver settings to make this change permanent, like so:
+```
+echo options hid_apple fnmode=0 | sudo tee -a /etc/modprobe.d/hid_apple.conf
+sudo update-initramfs -u -k all
+# reboot when convenient
+```
+
+### Keychron Bluetooth setting in Ubuntu
+bluetoothctl connect DC:2C:26:43:18:B4
+
+Script: (save it as /home/username/connect_speaker.sh)
+```
+#!/usr/bin/bash
+bluetoothctl trust DC:2C:26:43:18:B4
+bluetoothctl disconnect DC:2C:26:43:18:B4
+bluetoothctl connect DC:2C:26:43:18:B4
+```
+
+### 
