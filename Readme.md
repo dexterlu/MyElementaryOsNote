@@ -1,6 +1,15 @@
 # Readme
 Here are my elementary OS some configurations.
 
+## git repository
+```bash
+Yimac:MyElementaryOsNote dexter$ git remote -v
+github	git@github.com:dexterlu/MyElementaryOsNote.git (fetch)
+github	git@github.com:dexterlu/MyElementaryOsNote.git (push)
+origin	ssh://dexter@sandydexter.direct.quickconnect.to/volume1/git/MyElementaryOsNote (fetch)
+origin	ssh://dexter@sandydexter.direct.quickconnect.to/volume1/git/MyElementaryOsNote (push)
+```
+
 ## Elementary OS must install
 - https://linoxide.com/distros/
 - things-after-fresh-installation-elementary-5-juno/
